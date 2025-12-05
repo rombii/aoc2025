@@ -44,9 +44,6 @@ pub fn main() !void {
     }
     answer2 += currentRangeE - (currentRangeS - 1);
         
-    //if start2 > end1 -> continue
-    //else end1 = math.max(end1, end2)
-
     while(try reader2.interface.takeDelimiter('\n')) |line| {
         const id = try std.fmt.parseInt(u64, line, 10);
         var fresh = false;
@@ -62,7 +59,7 @@ pub fn main() !void {
         }
     }
 
-    std.debug.print("{d} {d}", .{answer1, answer2});
+    std.debug.print("Part 1: {d}\nPart 2: {d}\n", .{answer1, answer2});
 
     defer list.deinit(allocator);
     
