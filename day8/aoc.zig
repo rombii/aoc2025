@@ -105,13 +105,6 @@ pub fn main() !void {
     defer list.deinit(allocator);
     defer parent_array.deinit(allocator);
     defer distances.deinit(allocator);
-
-    //GAMEPLAN
-    //read every point as an 1x3 array
-    //we calculate 1000 pairs for 1000 points which means 1000*1000*1000
-    //for every closest pair we set on of their parents to another oone
-    //for example pair 12 - 54 will both have parent of either 12 or 54
-    //at the end we count every disctinct parent index and return multi of biggest 5
 }
 
 const Point = struct {
